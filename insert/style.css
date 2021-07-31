@@ -1,0 +1,133 @@
+.containers {
+  display: flex;
+  flex-direction: row;
+}
+.container-uno {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  width: 20%;
+  height: 300px;
+  position: relative;
+  background-color: #f0ad4e;
+}
+.container-dos {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  width: 80%;
+  height: 300px;
+  background-color: #f0ad4e;
+}
+.triangulo-equilatero-bottom-left {
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-top: 50px solid transparent;
+  border-left: 50px solid #f0ad4e;
+  border-bottom: 50px solid #f0ad4e;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 299px;
+  left: 30px;
+}
+.bordes-triangulo-right {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  width: 0px;
+  height: 100px;
+  position: absolute;
+  top: 100px;
+  left: 130px;
+}
+.triangulo-equilatero-bottom-left::before {
+  content: "";
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  border-left: 1px solid black;
+  position: absolute;
+  left: -51px;
+  top: -51px;
+}
+.triangulo-equilatero-bottom-left::after {
+  content: "";
+  height: 100px;
+  width: 140px;
+  background-color: transparent;
+  border-top: 1px solid black;
+  transform: rotate(45deg);
+  position: absolute;
+  left: -106px;
+  top: -16px;
+}
+.container {
+  max-width: 200px;
+  font-size: 2vw;
+  direction: ltr !important;
+}
+.container-de-containers {
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 100px;
+  height: 300px;
+  width: 300px;
+}
+#container {
+  margin: 30px 30px 30px -5px;
+  direction: rtl;
+  height: 200px;
+  max-height: 200px;
+  width: 90%;
+  overflow-y: auto;
+  scrollbar-color: rgb(92, 13, 13) transparent;
+  scrollbar-width: auto;
+}
+.container p {
+  max-width: 200px;
+  min-width: 200px;
+  margin: 40px 0;
+  scrollbar-width: 50px !important;
+}
+
+.container_grande::-webkit-scrollbar {
+  width: 9px; /* Tamaño del scroll en vertical */
+  height: 0px; /* Tamaño del scroll en horizontal */
+  display: block; /* Ocultar scroll */
+
+  z-index: 0;
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+
+.container_grande::-webkit-scrollbar-thumb {
+  background: rgb(143, 66, 66);
+  border-radius: 4px;
+  height: 100px;
+  padding-left: 20px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+
+.container_grande::-webkit-scrollbar-thumb:hover {
+  background: #642121;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+
+.container_grande::-webkit-scrollbar-thumb:active {
+  background-color: #a50f0f;
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+
+.container_grande::-webkit-scrollbar-track {
+  background: transparent;
+  z-index: 0;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+
+.container_grande::-webkit-scrollbar-track:hover,
+.container_grande::-webkit-scrollbar-track:active {
+  background: transparent;
+}
